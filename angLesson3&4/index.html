@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="AuthorApp">
+
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="angular.js"></script>
+    <script src="Authors.js"></script>
+  </head>
+
+  <body>
+    <h1>Angular Lesson 3</h1>
+    <div ng-controller="MyController">
+        <ul>
+            <li ng-repeat="author in authors">
+                {{author.name}}
+            </li>
+        </ul>
+    </div>
+  </body>
+
+</html>

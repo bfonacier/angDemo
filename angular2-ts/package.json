@@ -1,0 +1,20 @@
+{
+  "name": "angular2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.html"
+  },
+  "keywords": [],
+  "author": "Bennett",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfonacier/angDemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bfonacier/angDemo/issues"
+  },
+  "homepage": "https://github.com/bfonacier/angDemo#readme",
+  "description": ""
+}

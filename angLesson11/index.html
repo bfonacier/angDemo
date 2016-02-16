@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="angular.js"></script>
+    <script>
+        var mymodule = angular.module("mymodule", []);
+        mymodule.controller("x", function($scope) {
+            $scope.initialname = "Bennett";
+            $scope.initialemail = "test@email.com";
+            $scope.age = "57";
+            $scope.pattern = /^\d*$/;
+        });
+    </script>
+  </head>
+
+  <body ng-app="mymodule">
+    <h1>Angular Lesson 10</h1>
+    <div ng-controller="x">
+        <form name="form1">
+            <label>Name :</label>
+            <input name="name" ng-model="initialname" required />
+            <span style="color:red" ng-show="form1.name.$error.required">
+                Please enter your name.
+            </span>
+            <br />
+            <label>Email :</label>
+            <input name="email" ng-model="initialemail" type="email" />
+            <span style="color:red" ng-show="form1.email.$error.email">
+                Please enter valid email.
+            </span>
+            <br />
+            <label>Age :</label>
+            <input name="age" ng-model="age" ng-pattern="pattern" />
+            <span style="color:red" ng-show="form1.age.$error.pattern">
+                You cannot enter a negative age.
+            </span>
+            <br />           
+        </form>
+    </div>
+  </body>
+
+</html>
